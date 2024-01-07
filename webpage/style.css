@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+/*---------------navbar-----------------*/
+header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(images/background.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+.logo-img {
+    width: 150px; 
+    height: auto; 
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar h1{
+    color: #BD6F29;
+    text-shadow: 2px 2px 4px #000; 
+}
+
+
+.navbar-wrapper {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    transition: top 0.3s, background-color 0.3s;
+}
+.transparent {
+    background-color: rgba(0, 0, 0, 0); /* Make the background fully transparent */
+}
+.navbar-wrapper.sticky {
+    top: 0px; /* Adjust this value according to your needs */
+}
+
+
+.nav ul{
+    list-style: none;
+    background: rgba(0,0,0,0);
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    transition: 1s;
+}
+nav.black ul{
+    background: #000;
+
+}
+nav ul li{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000; 
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #420202;
+    position: absolute;
+    left: 0;
+    bottom: -10px;      
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/*---------------content-----------------*/
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    color: #8B0000;
+    font-size: 70px;
+    margin-top: 80px;
+    text-shadow: 2px 2px 4px #000; 
+}
+.content p{
+    color: #5A463E;
+    margin: 20px auto;
+    font-weight: 600px;
+    line-height: 25px;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+/*------menuboard---------*/
+
+.menuboard {
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('images/background\ 2.jpg') no-repeat center center;
+    background-size: cover;
+    object-fit: cover;
+    border-bottom: 50px solid black; 
+    border-top: 10px solid black; 
+}
+.menuboard h1{
+    color: #8F481E;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    text-shadow: 2px 2px 4px #000; 
+}
+
+p{
+    color: #FAF0DA;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .menu-category {
+    flex: 1;
+    margin: 10px;
+    padding: 30px;
+    border: 4px solid #050303;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .menu-category h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #FFA500;
+    text-shadow: 2px 2px 4px #000; 
+  }
+  
+  .menu-category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-category ul li {
+    margin-bottom: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000; 
+  }
+
+
+/*------Products---------*/
+
+.product{
+    width: 80%;
+    max-width: 1224px;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.product-col{
+    margin-top: -3%;
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    display: flex;
+}
+.product h1{
+    color: #8F481E;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 150px;
+    text-shadow: 2px 2px 4px #000; 
+    text-align: center;
+}
+.product-col figcaption{
+   font-size: 30px;
+    margin-bottom: 40px;
+    color: #420c05a6;
+    text-shadow: 2px 2px 4px #000; 
+}
+.product-col img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.product-col div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product div img{
+    width: 400px;
+    height: 300px;
+    border: 2px solid #47240F;
+    border-radius: 13px;
+    box-shadow: 4px 7px 7px 0px #00000042;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+.product div img:hover{
+    filter: grayscale(1);
+    transform: scale(1.03);
+
+}
+/*---------foods--------*/
+.food h1{
+    color: #8F481E;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px #000; 
+    text-align: center;
+}
+.food-menu {
+    display: flex;
+    justify-content: space-around; /* Adjust the spacing between menu items */
+    align-items: center;
+}
+
+.menu-item {
+    text-align: center;
+    width: 300px; /* Adjust the width of each menu item */
+    margin: 10px;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px; 
+}
+
+.menu-item img {
+    width: 100%;
+    height:80%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid #000;
+    border-radius: 13px;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 100;
+}
+
+
+/*---------Footer--------*/
+
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding-top: 70px;
+    background-color: black; /* Set the background color to black */
+}
+.socialIcons{
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Add alignment to center vertically */
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a i:hover{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+}
+
+.namelist {
+    margin-top: 20px; /* Adjust the margin top as needed */
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Add a top border for separation */
+}
+
+.namelist h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.namelist ul {
+    color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.namelist ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-left: 20px;
+}
